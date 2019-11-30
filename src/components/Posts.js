@@ -3,7 +3,7 @@ import React from "react";
 class Posts extends React.Component {
     render() {
         return (
-            <div className="content">
+            <div className="blog-list-wrapper">
                 <div className="blog-list w-dyn-list">
                     <div className="w-dyn-items">
                         <div className="w-dyn-item">
