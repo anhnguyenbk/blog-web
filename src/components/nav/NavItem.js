@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class NavItem extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class NavItem extends React.Component {
 
     render() {
         return (
-            <a href={this.props.linkTo} className="nav-link w-nav-link">{this.props.children}</a>
+            <Link to={this.props.linkTo} className="nav-link w-nav-link">{this.props.children}</Link>
         )
     }
 }
