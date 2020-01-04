@@ -12,23 +12,28 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
+import SinglePost from "./components/SinglePost"
+
 function App() {
     return (
         <Router>
             <Sidebar/>
 
             <Switch>
-                <Route path="/about">
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/about">
                     <About />
                 </Route>
-                <Route path="/contact">
+                <Route exact path="/contact">
                     <Contact />
                 </Route>
-                <Route path="/posts">
+                <Route exact path="/posts">
                     <Posts />
                 </Route>
-                <Route path="/">
-                    <Home />
+                <Route path="/:slug">
+                    <SinglePost />
                 </Route>
             </Switch>
         </Router>

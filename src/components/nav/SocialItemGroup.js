@@ -15,7 +15,7 @@ class SocialItemGroup extends React.Component {
             <div className="social-link-group">
                 <SocialItem linkTo="https://fb.com/beodn" iconSrc={facebookIcon} iconAlt="Facebook" />
                 <SocialItem linkTo="#" iconSrc={twitterIcon} iconAlt="Twitter" />
-                <SocialItem linkTo="#" iconSrc={githubIcon} iconAlt="Github" />
+                <SocialItem linkTo="https://github.com/anhnguyenbk" iconSrc={githubIcon} iconAlt="Github" />
                 <SocialItem linkTo="#" iconSrc={linkedinIcon} iconAlt="Linkedin" />
             </div>
         )
