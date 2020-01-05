@@ -2,8 +2,6 @@ import React from "react";
 import axios from 'axios';
 import {withRouter} from "react-router";
 import ReactHtmlParser from 'react-html-parser';
-import Moment from "react-moment";
-import {Link} from "react-router-dom";
 import PostInfo from "./post/PostInfo";
 
 class SinglePost extends React.Component {
@@ -17,7 +15,7 @@ class SinglePost extends React.Component {
 
     componentDidMount() {
         const {match: {params}} = this.props;
-        axios.get(process.env.REACT_APP_BLOG_SERVICE_API + "/posts/slug/" + params.slug)
+        axios.get(process.env.REACT_APP_POST_API + "/slug/" + params.slug)
             .then(res => {
                 console.log(res.data);
                 this.setState({post: res.data});

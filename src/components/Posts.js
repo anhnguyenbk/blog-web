@@ -12,7 +12,7 @@ class Posts extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.REACT_APP_BLOG_SERVICE_API + "/posts")
+        axios.get(process.env.REACT_APP_POST_API)
             .then(res => {
                 const posts = res.data;
                 this.setState({posts: posts});
