@@ -20,14 +20,14 @@ class PostItem extends React.Component {
             <div className="w-dyn-item">
                 <div className="post-wrapper">
                     <div>
-                        <a href={this.postDetailLink(post.slug)}
+                        <Link to={this.postDetailLink(post.slug)}
                            className="blog-title-link w-inline-block">
-                            <h1 className="blog-title">{post.title}</h1></a>
+                            <h1 className="blog-title">{post.title}</h1></Link>
                         <PostInfo post={post}/>
 
                         <p className="post-summary">{post.desc}</p>
-                        <a href={this.postDetailLink(post.slug)}
-                           className="button-round w-button">Continue reading →</a>
+                        <Link to={this.postDetailLink(post.slug)}
+                           className="button-round w-button">Continue reading →</Link>
                     </div>
                 </div>
             </div>
