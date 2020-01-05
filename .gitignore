@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -61,4 +63,7 @@ typings/
 .next
 
 #IDE
-.idea/**
+.idea
+
+# build
+build

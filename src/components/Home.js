@@ -1,8 +1,9 @@
 import React from "react";
-import axios from 'axios';
 import PostItem from "./post/PostItem";
+import axios from "axios";
 
-class Posts extends React.Component {
+class Home extends React.Component {
+
     constructor(props) {
         super(props);
 
@@ -22,21 +23,20 @@ class Posts extends React.Component {
     render() {
         return (
             <div className="content">
-                <div className="w-container"><h1 className="section-header">All Posts</h1>
-                    <div className="w-dyn-list">
-                        <div className="w-dyn-items">
+                <div className="blog-list w-dyn-list">
+                    <div className="w-dyn-items">
 
-                            {this.state.posts.map(function (post) {
-                                return <PostItem key={post.id} post={post}/>;
-                            })}
+                        {this.state.posts.map(function (post) {
+                            return <PostItem key={post.id} post={post}/>;
+                        })}
 
-                        </div>
                     </div>
+                </div>
+                <div className="button-wrapper"><a href="/all-posts" className="button w-button">More posts&nbsp;→</a>
                 </div>
             </div>
         )
     }
-
 }
 
-export default Posts;
+export default Home;

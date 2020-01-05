@@ -1,16 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Sidebar from "./components/Sidebar";
 import Posts from "./components/Posts";
-import Content from "./components/Content";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+
+import SinglePost from "./components/SinglePost"
 
 function App() {
     return (
-        <div className="App">
+        <Router>
             <Sidebar/>
-            <Content/>
-        </div>
+
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/about">
+                    <About />
+                </Route>
+                <Route exact path="/contact">
+                    <Contact />
+                </Route>
+                <Route exact path="/posts">
+                    <Posts />
+                </Route>
+                <Route path="/:slug">
+                    <SinglePost />
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
