@@ -1106,20 +1106,20 @@
         "signature": "5bffca534dc11b5adef419496da9399e7f88f3e58249543c71322d01da785890"
       },
       "../src/posts/posts.service.ts": {
-        "version": "7f69b3a91f1e229def442b51d1f10ce3d7ea782db79bc430b91702fb374891e2",
-        "signature": "056104c147ee5a38c51990163218ca879b62360b7c050a31b4545bb168aea731"
+        "version": "ec82356226066eaa2b79f3cd7b9e0199ef97b440750138c805869d71b4904557",
+        "signature": "55d7ce56207f658e51a73bc564d0818f8ce72f845ce64c289629f612293c5a61"
       },
       "../src/app.service.ts": {
         "version": "09413f419e03d109cdf3b93af052bc78a0698a85be161ff0462f9db8abf3afa0",
         "signature": "0292a779e68a937ee65ed9c36c8311ea954cc4076aaf5d1283c937c3b5b7ec0a"
       },
       "../src/app.controller.ts": {
-        "version": "d75989aea7884a5e7b54330ade0048820456730c8197d19c8152d5d7b6a88543",
-        "signature": "d5a8529051186d71cac1fbfb67910a145c0e20d4c6fcac99ef08e045019280e5"
+        "version": "7f34cb2ac5a43a29a48d8bfbf5b2aaa20f5694657c5282aeabdf82b425c45e0f",
+        "signature": "4c1480b5b21cebc13243b739040f99767c7f3dda2722991f95caab3fa7f54161"
       },
       "../src/posts/posts.controller.ts": {
-        "version": "d4270378ac55b39bf59e2a9ea6dbc7c9341ad82e2180a4692abae468c8301966",
-        "signature": "fe0a6468abb80008005c3f94512ec1108aaff8d2ad8998f87aa76c00c20b7d19"
+        "version": "19e4ef57ce847f7041006709594b1ae245cf5d72a5bc764f6dc0310760c00055",
+        "signature": "5e8c60740f7f5ed91ec26b5ac5e012d9726e069be7ac4ed2da3d2993cc0661b6"
       },
       "../src/posts/posts.module.ts": {
         "version": "3f4d1041a0e536b06c458b7cd07b5ed4663b6a56391503bcc68056948447c769",
@@ -1333,8 +1333,12 @@
         "version": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c",
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c"
       },
+      "../node_modules/moment/moment.d.ts": {
+        "version": "d62fa6fe33566fa743b3d6715a1a2fe46e937ba9d2ba158563c5744315d438a7",
+        "signature": "d62fa6fe33566fa743b3d6715a1a2fe46e937ba9d2ba158563c5744315d438a7"
+      },
       "../src/main.ts": {
-        "version": "459eef99d7e258260ef0c4390e42e5d49602b414595dd750b438a5a92a982711",
+        "version": "8350e1f9fb80813bf89cf4dce1805ae6867d631a91cb4bc12c4cc3706eaeb398",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -4172,11 +4176,18 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../node_modules/moment/moment.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/platform-express/index.d.ts",
         "../node_modules/@types/node/path.d.ts",
         "../src/app.module.ts",
+        "../node_modules/moment/moment.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -7079,6 +7090,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../node_modules/moment/moment.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -7625,7 +7642,6 @@
       "../node_modules/@nestjs/common/utils/index.d.ts",
       "../node_modules/@nestjs/common/index.d.ts",
       "../src/posts/interfaces/post.interface.ts",
-      "../src/posts/posts.service.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",

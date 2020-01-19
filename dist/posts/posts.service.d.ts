@@ -6,4 +6,5 @@ export declare class PostsService {
     private readonly httpService;
     constructor(httpService: HttpService);
     findAll(): Observable<AxiosResponse<Post[]>>;
+    findBySlug(slug: string): Observable<AxiosResponse<Post>>;
 }

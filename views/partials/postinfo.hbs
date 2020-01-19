@@ -1,0 +1,7 @@
+<div class="post-info-wrapper">
+    <div class="post-info">{{formatDate post.createdAt}}</div>
+    <div class="post-info">|</div>
+    {{#each post.categories}}
+        <a href="{{categoryLink this.value}}" class="post-info when-link">{{this.text}}</a>
+    {{/each}}
+</div>

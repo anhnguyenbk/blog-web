@@ -12,4 +12,16 @@ export class AppController {
     const response = await this.postsService.findAll().toPromise();
     return { ...this.appService.getCommonValues(), posts: response.data };
   }
+
+  @Get('/about')
+  @Render('about')
+  about() {
+    return { ...this.appService.getCommonValues() }
+  }
+
+  @Get('/contact')
+  @Render('contact')
+  contact() {
+    return { ...this.appService.getCommonValues() }
+  }
 }

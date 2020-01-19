@@ -4,6 +4,7 @@ const core_1 = require("@nestjs/core");
 const path_1 = require("path");
 const app_module_1 = require("./app.module");
 const hbs = require("hbs");
+const moment = require("moment");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useStaticAssets(path_1.join(__dirname, '..', 'public'));
@@ -22,6 +23,12 @@ async function bootstrap() {
         const val = (blocks[name] || []).join('\n');
         blocks[name] = [];
         return val;
+    });
+    hbs.registerHelper('formatDate', function (dateTime) {
+        return moment(dateTime).format('MMMM D, YYYY');
+    });
+    hbs.registerHelper('categoryLink', function (category) {
+        return `/categories/${category}`;
     });
     await app.listen(3000);
     if (module.hot) {

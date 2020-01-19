@@ -12,4 +12,12 @@ export declare class PostsController {
             link: string;
         }[];
     }>;
+    findOne(slug: any): Promise<{
+        post: import("./interfaces/post.interface").Post;
+        socialItems: {
+            name: string;
+            icon: string;
+            link: string;
+        }[];
+    }>;
 }

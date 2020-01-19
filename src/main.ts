@@ -3,6 +3,7 @@ import {NestExpressApplication} from '@nestjs/platform-express';
 import {join} from 'path';
 import {AppModule} from './app.module';
 import * as hbs from 'hbs';
+import moment = require("moment");
 
 declare const module: any;
 
@@ -35,6 +36,14 @@ async function bootstrap() {
         // clear the block
         blocks[name] = [];
         return val;
+    });
+
+    hbs.registerHelper('formatDate', function(dateTime) {
+        return moment(dateTime).format('MMMM D, YYYY');
+    });
+
+    hbs.registerHelper('categoryLink', function(category) {
+        return `/categories/${category}`;
     });
 
     await app.listen(3000);

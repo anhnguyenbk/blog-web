@@ -21,6 +21,12 @@ let AppController = class AppController {
         const response = await this.postsService.findAll().toPromise();
         return Object.assign(Object.assign({}, this.appService.getCommonValues()), { posts: response.data });
     }
+    about() {
+        return Object.assign({}, this.appService.getCommonValues());
+    }
+    contact() {
+        return Object.assign({}, this.appService.getCommonValues());
+    }
 };
 __decorate([
     common_1.Get(),
@@ -29,6 +35,20 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "root", null);
+__decorate([
+    common_1.Get('/about'),
+    common_1.Render('about'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "about", null);
+__decorate([
+    common_1.Get('/contact'),
+    common_1.Render('contact'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "contact", null);
 AppController = __decorate([
     common_1.Controller(),
     __metadata("design:paramtypes", [posts_service_1.PostsService, app_service_1.AppService])

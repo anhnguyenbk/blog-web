@@ -12,4 +12,18 @@ export declare class AppController {
             link: string;
         }[];
     }>;
+    about(): {
+        socialItems: {
+            name: string;
+            icon: string;
+            link: string;
+        }[];
+    };
+    contact(): {
+        socialItems: {
+            name: string;
+            icon: string;
+            link: string;
+        }[];
+    };
 }

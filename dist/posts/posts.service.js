@@ -17,6 +17,9 @@ let PostsService = class PostsService {
     findAll() {
         return this.httpService.get('https://rildq3ohi7.execute-api.ap-southeast-1.amazonaws.com/prod/');
     }
+    findBySlug(slug) {
+        return this.httpService.get(`https://rildq3ohi7.execute-api.ap-southeast-1.amazonaws.com/prod/slug/${slug}`);
+    }
 };
 PostsService = __decorate([
     common_1.Injectable(),

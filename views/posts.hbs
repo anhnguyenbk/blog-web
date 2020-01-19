@@ -1,1 +1,10 @@
-ALL POSTS
+<div class="w-container">
+    <h1 class="section-header">All Posts</h1>
+    <div class="w-dyn-list">
+        <div class="w-dyn-items">
+            {{#each posts}}
+                {{>postitem post=.}}
+            {{/each}}
+        </div>
+    </div>
+</div>
