@@ -1,0 +1,8 @@
+<div class="blog-list w-dyn-list">
+    <div class="w-dyn-items">
+        {{#each posts}}
+            {{>postitem post=.}}
+        {{/each}}
+    </div>
+</div>
+<div class="button-wrapper"><a href="/all-posts" class="button w-button">More posts&nbsp;→</a></div>

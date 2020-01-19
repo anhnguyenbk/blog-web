@@ -1,0 +1,19 @@
+<div class="w-dyn-item">
+    <div class="post-wrapper">
+        <div><a class="blog-title-link w-inline-block" href="/{{post.slug}}"><h1
+                class="blog-title">{{post.title}}</h1></a>
+            <div class="post-info-wrapper">
+                <div class="post-info">
+                    <time>{{post.createdAt}}</time>
+                </div>
+                <div class="post-info">|</div>
+
+                {{#each post.categories}}
+                    <a class="post-info when-link" href="/{{this.value}}">{{this.text}}</a>
+                {{/each}}
+            </div>
+            <p class="post-summary">{{post.desc}}</p>
+            <a class="button-round w-button" href="/{{post.slug}}">Continue reading →</a>
+        </div>
+    </div>
+</div>
