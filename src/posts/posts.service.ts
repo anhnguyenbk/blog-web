@@ -15,4 +15,8 @@ export class PostsService {
     findBySlug(slug : string): Observable<AxiosResponse<Post>> {
         return this.httpService.get(`https://rildq3ohi7.execute-api.ap-southeast-1.amazonaws.com/prod/slug/${slug}`);
     }
+
+    findByCategory(slug : string): Observable<AxiosResponse<Post[]>> {
+        return this.httpService.get(`https://rildq3ohi7.execute-api.ap-southeast-1.amazonaws.com/prod/categories/${slug}`);
+    }
 }

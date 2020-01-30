@@ -13,15 +13,9 @@ export class AppController {
     return { ...this.appService.getCommonValues(), posts: response.data };
   }
 
-  @Get('/about')
-  @Render('about')
-  about() {
-    return { ...this.appService.getCommonValues() }
-  }
-
-  @Get('/contact')
-  @Render('contact')
-  contact() {
+  @Get('/cv')
+  @Render('cv')
+  cv() {
     return { ...this.appService.getCommonValues() }
   }
 }

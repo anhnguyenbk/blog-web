@@ -67,3 +67,6 @@ typings/
 
 # build
 build
+dist
+dist_beanstalk
+dist_beanstalk.zip

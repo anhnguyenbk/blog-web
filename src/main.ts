@@ -46,7 +46,9 @@ async function bootstrap() {
         return `/categories/${category}`;
     });
 
-    await app.listen(3000);
+    var port = process.env.PORT || 3000;
+    await app.listen(port);
+    console.log('Server running at http://127.0.0.1:' + port + '/');
 
     if (module.hot) {
         module.hot.accept();
