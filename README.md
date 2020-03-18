@@ -9,6 +9,8 @@ $ npm start
 
 ```bash
 $ gulp clean
-$ gulp buildBeanstalk
-$ gulp deploy
+$ gulp build
+$ gulp dist
+$ gulp distZip
 ```
+Upload the zip package into the beanstalk.
