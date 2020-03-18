@@ -1,21 +1,15 @@
 import {Controller, Get, Render} from '@nestjs/common';
 import {PostsService} from './posts/posts.service';
-import {AppService} from './app.service';
+import {WebConfigService} from "./config/webconfig.service";
 
 @Controller()
 export class AppController {
-  constructor(private readonly postsService: PostsService, private readonly appService: AppService) {}
+  constructor(private readonly postsService: PostsService, private readonly configService: WebConfigService) {}
 
   @Get()
   @Render('index')
   async root() {
     const response = await this.postsService.findAll().toPromise();
-    return { ...this.appService.getCommonValues(), posts: response.data };
-  }
-
-  @Get('/cv')
-  @Render('cv')
-  cv() {
-    return { ...this.appService.getCommonValues() }
+    return this.configService.decorateWebConfig({posts: response.data});
   }
 }

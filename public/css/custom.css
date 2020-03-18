@@ -1,0 +1,29 @@
+.post-comment-section {
+    margin-top: 20px;
+    border-top: 1px solid #dadada;
+}
+
+.comment-list {
+    padding-left: 0;
+}
+
+.comment-list .comment-item {
+    list-style-type: none;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-bottom: #cccccc 1px dashed;
+}
+
+.comment-list .comment-time {
+    float: right;
+    font-size: 0.8em;
+}
+
+.comment-list .comment-user {
+    font-weight: bold;
+}
+
+.comment-list .comment-content {
+    margin-top: 5px;
+    font-size: 1em;
+}

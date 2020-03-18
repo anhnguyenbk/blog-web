@@ -10,10 +10,9 @@
 
                 <a class="nav-link w-nav-link w--current" href="/" style="max-width: 940px;">Home</a>
                 <a class="nav-link w-nav-link" href="/posts" style="max-width: 940px;">All Posts</a>
-                <a class="nav-link w-nav-link" href="/cv" style="max-width: 940px;">Curriculum Vitae</a>
                 <div class="divider"></div>
                 <div class="social-link-group">
-                    {{#each socialItems}}
+                    {{#each config.socialItems}}
                         <a href="{{this.link}}" target="_blank"
                            class="social-icon-link w-inline-block"><img
                                 src="/icons/{{this.icon}}" width="25" alt="{{this.name}}"></a>

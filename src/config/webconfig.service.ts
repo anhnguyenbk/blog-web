@@ -1,8 +1,19 @@
-import {Injectable} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import {ConfigService} from "@nestjs/config";
 
 @Injectable()
-export class AppService {
-    getCommonValues() {
+export class WebConfigService {
+    constructor(private configService: ConfigService) {}
+
+    apiServiceUrl() {
+        return this.configService.get("API_SERVICE_URL");
+    }
+
+    decorateWebConfig(data : Object) {
+        return { ...data, config: this.webUIConfig()};
+    }
+
+    webUIConfig() {
         return {
             socialItems: [
                 {
@@ -13,7 +24,7 @@ export class AppService {
                 {
                     name: 'Twitter',
                     icon: 'social-18-white.svg',
-                    link: '#',
+                    link: 'https://twitter.com/ngbeobk',
                 },
                 {
                     name: 'Github',
@@ -21,9 +32,9 @@ export class AppService {
                     link: 'https://github.com/anhnguyenbk',
                 },
                 {
-                    name: 'Github',
+                    name: 'Linkedin',
                     icon: 'social-09-white.svg',
-                    link: '#',
+                    link: 'https://www.linkedin.com/in/anhnguyenbk12',
                 },
             ],
         };

@@ -42,6 +42,10 @@ async function bootstrap() {
         return moment(dateTime).format('MMMM D, YYYY');
     });
 
+    hbs.registerHelper("formatFriendlyTime", function(datetime) {
+        return  moment(datetime).fromNow();
+    });
+
     hbs.registerHelper('categoryLink', function(category) {
         return `/categories/${category}`;
     });
