@@ -530,7 +530,7 @@ __webpack_require__(10);
 __webpack_require__(11);
 __webpack_require__(12);
 __webpack_require__(13);
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(17);
 
 
 /***/ }),
@@ -1287,16 +1287,6 @@ Webflow.define('touch', module.exports = function ($) {
 /* 15 */
 /***/ (function(module, exports) {
 
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
 function _iterableToArrayLimit(arr, i) {
   var _arr = [];
   var _n = true;
@@ -1326,11 +1316,11 @@ function _iterableToArrayLimit(arr, i) {
 module.exports = _iterableToArrayLimit;
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1346,7 +1336,7 @@ module.exports = _iterableToArrayLimit;
 
 var Webflow = __webpack_require__(0);
 
-var IXEvents = __webpack_require__(19);
+var IXEvents = __webpack_require__(18);
 
 Webflow.define('navbar', module.exports = function ($, _) {
   var api = {};
@@ -1761,7 +1751,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 });
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
