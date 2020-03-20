@@ -285,25 +285,6 @@ Webflow.resize = eventProxy($win, resizeEvents);
 Webflow.scroll = eventProxy($win, scrollEvents);
 Webflow.redraw = eventProxy(); // Create a proxy instance for throttled events
 
-// Custom underscore function
-_.throttle = function (func) {
-  // eslint-disable-next-line one-var
-  var wait, args, context;
-  return function () {
-    if (wait) return;
-    wait = true;
-    args = arguments;
-    context = this;
-    tram.frame(function () {
-      wait = false;
-      func.apply(context, args);
-    });
-  };
-}; // Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-
 function eventProxy(target, types) {
   // Set up throttled method (using custom frame-based _.throttle)
   var handlers = [];
