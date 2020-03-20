@@ -530,7 +530,7 @@ __webpack_require__(10);
 __webpack_require__(11);
 __webpack_require__(12);
 __webpack_require__(13);
-module.exports = __webpack_require__(17);
+module.exports = __webpack_require__(14);
 
 
 /***/ }),
@@ -1283,46 +1283,6 @@ Webflow.define('touch', module.exports = function ($) {
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
  // @wf-will-never-add-flow-to-this-file
 
@@ -1336,7 +1296,7 @@ module.exports = _iterableToArrayLimit;
 
 var Webflow = __webpack_require__(0);
 
-var IXEvents = __webpack_require__(18);
+var IXEvents = __webpack_require__(15);
 
 Webflow.define('navbar', module.exports = function ($, _) {
   var api = {};
@@ -1751,7 +1711,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 });
 
 /***/ }),
-/* 18 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
