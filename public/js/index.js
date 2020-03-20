@@ -115,7 +115,7 @@ var $win = $(window);
 var $doc = $(document);
 var isFunction = $.isFunction;
 
-var _ = Webflow._ = __webpack_require__(6);
+var _ = Webflow._ = __webpack_require__(5);
 
 var tram = Webflow.tram = __webpack_require__(2) && $.tram;
 var domready = false;
@@ -522,21 +522,14 @@ module.exports = api;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
-__webpack_require__(8);
 __webpack_require__(1);
-__webpack_require__(9);
-__webpack_require__(10);
-__webpack_require__(11);
-module.exports = __webpack_require__(12);
+__webpack_require__(6);
+__webpack_require__(7);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/***/ }),
-/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -912,37 +905,7 @@ module.exports = function () {
 /* eslint-enable */
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/***/ }),
-/* 10 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1109,7 +1072,7 @@ Webflow.define('scroll', module.exports = function ($) {
 });
 
 /***/ }),
-/* 11 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1270,7 +1233,7 @@ Webflow.define('touch', module.exports = function ($) {
 });
 
 /***/ }),
-/* 12 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1286,7 +1249,7 @@ Webflow.define('touch', module.exports = function ($) {
 
 var Webflow = __webpack_require__(0);
 
-var IXEvents = __webpack_require__(13);
+var IXEvents = __webpack_require__(9);
 
 Webflow.define('navbar', module.exports = function ($, _) {
   var api = {};
@@ -1701,7 +1664,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
 });
 
 /***/ }),
-/* 13 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
