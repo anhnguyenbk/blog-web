@@ -3,10 +3,15 @@ import {ConfigService} from "@nestjs/config";
 
 @Injectable()
 export class WebConfigService {
-    constructor(private configService: ConfigService) {}
+    constructor(private configService: ConfigService) {
+    }
 
     apiServiceUrl() {
         return this.configService.get("API_SERVICE_URL");
+    }
+
+    serviceToken() {
+        return this.configService.get("API_SERVICE_TOKEN");
     }
 
     decorateWebConfig(data : Object) {

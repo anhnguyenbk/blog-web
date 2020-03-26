@@ -1,23 +1,25 @@
-import {HttpService, Injectable} from '@nestjs/common';
-import { Post } from './interfaces/post.interface';
-import { AxiosResponse } from 'axios';
+import {Injectable} from '@nestjs/common';
+import {Post} from './post';
+import {AxiosResponse} from 'axios';
 import {Observable} from 'rxjs';
 import {WebConfigService} from "../config/webconfig.service";
+import {RestService} from "../common/rest.service";
 
 @Injectable()
 export class PostsService {
 
-    constructor(private readonly httpService: HttpService, readonly configService: WebConfigService) {}
+    constructor(private readonly restService: RestService, readonly configService: WebConfigService) {
+    }
 
     findAll(): Observable<AxiosResponse<Post[]>> {
-        return this.httpService.get(this.configService.apiServiceUrl() + "/posts");
+        return this.restService.get("/posts");
     }
 
-    findBySlug(slug : string): Observable<AxiosResponse<Post>> {
-        return this.httpService.get(this.configService.apiServiceUrl() + `/posts/slug/${slug}`);
+    findBySlug(slug: string): Observable<AxiosResponse<Post>> {
+        return this.restService.get(`/posts/slug/${slug}`);
     }
 
-    findByCategory(slug : string): Observable<AxiosResponse<Post[]>> {
-        return this.httpService.get(this.configService.apiServiceUrl() + `/categories/${slug}`);
+    findByCategory(slug: string): Observable<AxiosResponse<Post[]>> {
+        return this.restService.get(`/categories/${slug}`);
     }
 }
