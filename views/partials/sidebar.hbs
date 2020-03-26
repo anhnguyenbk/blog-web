@@ -1,0 +1,27 @@
+<div class="sidebar-column">
+    <div data-collapse="medium" data-animation="default" data-duration="400" class="navigation-bar w-nav">
+        <div class="w-container"><a href="/" class="logo-link w-nav-brand w--current">
+            <h1 class="logo-text">Anh Nguyen's blog</h1></a>
+
+            <nav role="navigation" class="navigation-menu w-nav-menu"><p
+                    class="main-subheading w-hidden-medium w-hidden-small w-hidden-tiny">Hi, I am a software engineer
+                and daydreaming.</p>
+                <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+
+                <a class="nav-link w-nav-link w--current" href="/" style="max-width: 940px;">Home</a>
+                <a class="nav-link w-nav-link" href="/posts" style="max-width: 940px;">All Posts</a>
+                <div class="divider"></div>
+                <div class="social-link-group">
+                    {{#each config.socialItems}}
+                        <a href="{{this.link}}" target="_blank"
+                           class="social-icon-link w-inline-block"><img
+                                src="/icons/{{this.icon}}" width="25" alt="{{this.name}}"></a>
+                    {{/each}}
+                </div>
+            </nav>
+            <div class="menu-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+        </div>
+    </div>
+</div>

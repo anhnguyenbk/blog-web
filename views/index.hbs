@@ -1,0 +1,12 @@
+{{#extend "title"}}
+    <title>Anh Nguyen's blog</title>
+{{/extend}}
+
+<div class="blog-list w-dyn-list">
+    <div class="w-dyn-items">
+        {{#each posts}}
+            {{>postitem post=.}}
+        {{/each}}
+    </div>
+</div>
+<div class="button-wrapper"><a href="/posts" class="button w-button">More posts&nbsp;→</a></div>
