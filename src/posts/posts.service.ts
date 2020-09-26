@@ -19,7 +19,7 @@ export class PostsService {
         return this.restService.get(`/posts/slug/${slug}`);
     }
 
-    findByCategory(slug: string): Observable<AxiosResponse<Post[]>> {
-        return this.restService.get(`/categories/${slug}`);
+    findByCategory(id: string): Observable<AxiosResponse<Post[]>> {
+        return this.restService.get(`/posts/category/${id}`);
     }
 }

@@ -1,15 +1,16 @@
 import {Controller, Get, Render} from '@nestjs/common';
 import {PostsService} from './posts/posts.service';
-import {WebConfigService} from "./config/webconfig.service";
+import { WebService } from './common/web.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly postsService: PostsService, private readonly configService: WebConfigService) {}
+  constructor(private readonly postsService: PostsService, 
+    private readonly webService: WebService) {}
 
   @Get()
   @Render('index')
   async root() {
     const response = await this.postsService.findAll().toPromise();
-    return this.configService.decorateWebConfig({posts: response.data});
+    return await this.webService.doRender({posts: response.data});
   }
 }

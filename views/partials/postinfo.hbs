@@ -2,6 +2,6 @@
     <div class="post-info">{{formatDate post.createdAt}}</div>
     <div class="post-info">|</div>
     {{#each post.categories}}
-        <a href="{{categoryLink this.value}}" class="post-info when-link">{{this.text}}</a>
+        <a href="{{categoryLink this.slug}}" class="post-info when-link">{{this.name}}</a>
     {{/each}}
 </div>

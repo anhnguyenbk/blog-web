@@ -1,4 +1,7 @@
 export class Category {
-    text: string;
-    value: string;
+    _id: string;
+    name: string;
+    slug: string;
+    order: number;
+    createdAt: number;
 }

@@ -39,9 +39,9 @@ function deploy(cb) {
         },
         applicationName:'blog-web',
         environmentName: 'tobi-blog',
-        versionLabel: '1.2.5',
+        versionLabel: '1.2.7',
         sourceBundle: './dist_beanstalk.zip',
-        description: 'AnhngBlog v1.2.5'
+        description: 'AnhngBlog v1.2.7'
     }, cb);
 }
 
