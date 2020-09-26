@@ -12,6 +12,8 @@ export class CommentsService {
     }
 
     save(commentDto: CommentDto): Observable<AxiosResponse> {
+        console.log ("Add comment: " + JSON.stringify(commentDto))
+        
         const comment = new Comment();
         comment.content = commentDto.content;
         comment.user = commentDto.user;

@@ -1,18 +1,18 @@
-import { Injectable } from '@nestjs/common';
-import {ConfigService} from "@nestjs/config";
-import {CategoriesService} from "../categories/categories.service"
+import {Injectable} from '@nestjs/common';
+import {RestService} from "./rest.service";
 
 @Injectable()
-export class WebConfigService {
-    constructor(private configService: ConfigService) {
+export class WebService {
+    constructor(private restService: RestService) {
     }
 
-    apiServiceUrl() {
-        return this.configService.get("API_SERVICE_URL");
+    async doRender(data : Object) {
+        return { ...data, categories: await this.getCategories(), config: this.configData()};
     }
 
-    serviceToken() {
-        return this.configService.get("API_SERVICE_TOKEN");
+    async getCategories() {
+        const categoriesRes = await this.restService.get(`/categories`).toPromise();
+        return categoriesRes.data
     }
 
     configData() {

@@ -1,16 +1,25 @@
 import {Controller, Get, Param, Render} from '@nestjs/common';
 import {PostsService} from "../posts/posts.service";
-import {WebConfigService} from "../config/webconfig.service";
+import {CategoriesService} from "./categories.service";
+import { WebService } from 'src/common/web.service';
 
 @Controller('categories')
 export class CategoriesController {
-    constructor(private readonly postsService: PostsService, private readonly configService: WebConfigService) {}
+    constructor(private readonly postsService: PostsService, 
+            private readonly categoriesService: CategoriesService,
+            private readonly webService: WebService) {}
 
     @Get(':slug')
     @Render('category')
     async findByCategory(@Param('slug') slug) {
-        const response = await this.postsService.findByCategory(slug).toPromise();
-        let category = response.data[0].categories.find(v => v.value == slug);
-        return this.configService.decorateWebConfig({posts: response.data, category: category});
+        console.log (`Find category by slug: ${slug}`)
+        const categoryRes = await this.categoriesService.findBySlug(slug).toPromise();
+        const category = categoryRes.data;
+        console.log (category)
+
+        console.log (`Find posts by category: ${category._id}`)
+        const postsRes = await this.postsService.findByCategory(category._id).toPromise();
+        console.log (postsRes.data)
+        return await this.webService.doRender({posts: postsRes.data, category: categoryRes.data});
     }
 }

@@ -10,6 +10,10 @@
 
                 <a class="nav-link w-nav-link w--current" href="/" style="max-width: 940px;">Home</a>
                 <a class="nav-link w-nav-link" href="/posts" style="max-width: 940px;">All Posts</a>
+                {{#each categories}}
+                <a class="nav-link w-nav-link" href="{{categoryLink this.slug}}" style="max-width: 940px;">{{this.name}}</a>
+                {{/each}}
+
                 <div class="divider"></div>
                 <div class="social-link-group">
                     {{#each config.socialItems}}
