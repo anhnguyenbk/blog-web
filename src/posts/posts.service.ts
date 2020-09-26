@@ -12,7 +12,7 @@ export class PostsService {
     }
 
     findAll(): Observable<AxiosResponse<Post[]>> {
-        return this.restService.get("/posts");
+        return this.restService.get("/posts/published");
     }
 
     findBySlug(slug: string): Observable<AxiosResponse<Post>> {
