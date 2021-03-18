@@ -4,11 +4,11 @@ import {AxiosResponse} from "axios";
 import {Comment} from "./data/comment";
 import {CommentDto} from "./data/commentDto";
 import {WebConfigService} from "../config/webconfig.service";
-import {RestService} from "../common/rest.service";
+import {BlogService} from "../common/rest.service";
 
 @Injectable()
 export class CommentsService {
-    constructor(private readonly restService: RestService, readonly configService: WebConfigService) {
+    constructor(private readonly restService: BlogService, readonly configService: WebConfigService) {
     }
 
     save(commentDto: CommentDto): Observable<AxiosResponse> {

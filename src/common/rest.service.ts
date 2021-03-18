@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 import {AxiosResponse} from "axios";
 
 @Injectable()
-export class RestService {
+export class BlogService {
     constructor(private configService: WebConfigService, private httpService: HttpService) {
     }
 

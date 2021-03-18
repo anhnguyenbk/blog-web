@@ -6,11 +6,11 @@ import {CommentsModule} from "./comments/comments.module";
 import {WebConfigService} from "./config/webconfig.service";
 import {ConfigModule} from "@nestjs/config";
 import { WebService } from './common/web.service';
-import { RestService } from './common/rest.service';
+import { BlogService } from './common/rest.service';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule, PostsModule, CategoriesModule, CommentsModule],
-  providers: [WebConfigService, RestService, WebService],
+  providers: [WebConfigService, BlogService, WebService],
   controllers: [AppController],
 })
 export class AppModule {}

@@ -3,12 +3,12 @@ import {Post} from './post';
 import {AxiosResponse} from 'axios';
 import {Observable} from 'rxjs';
 import {WebConfigService} from "../config/webconfig.service";
-import {RestService} from "../common/rest.service";
+import {BlogService} from "../common/rest.service";
 
 @Injectable()
 export class PostsService {
 
-    constructor(private readonly restService: RestService, readonly configService: WebConfigService) {
+    constructor(private readonly restService: BlogService, readonly configService: WebConfigService) {
     }
 
     findAll(): Observable<AxiosResponse<Post[]>> {

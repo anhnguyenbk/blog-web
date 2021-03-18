@@ -1,9 +1,9 @@
 {
-  "name": "web2",
-  "version": "0.0.1",
+  "name": "anh-nguyen-blog-web",
+  "version": "1.0.0",
   "description": "",
-  "author": "",
-  "license": "MIT",
+  "author": "Anh Nguyen",
+  "license": "",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

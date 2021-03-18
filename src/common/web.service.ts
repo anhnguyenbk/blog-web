@@ -1,9 +1,9 @@
 import {Injectable} from '@nestjs/common';
-import {RestService} from "./rest.service";
+import {BlogService} from "./rest.service";
 
 @Injectable()
 export class WebService {
-    constructor(private restService: RestService) {
+    constructor(private restService: BlogService) {
     }
 
     async doRender(data : Object) {
