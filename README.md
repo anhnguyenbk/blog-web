@@ -1,8 +1,9 @@
+# Blog Web
 
 ## Installation
 
 ```bash
-$ npm start
+npm start
 ```
 
 ## Deploy to AWS Elastic Beanstalk
